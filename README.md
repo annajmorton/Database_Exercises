@@ -1,0 +1,1 @@
+Repository is for excercises relating to mysql
