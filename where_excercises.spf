@@ -93,13 +93,77 @@
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT * 
+FROM employees 
+WHERE (hire_date BETWEEN '1990-01-01' AND '1999-12-31')
+	AND birth_date LIKE '%-12-25'
+ORDER BY hire_date, birth_date</string>
+		<string>SELECT * 
+FROM employees 
+WHERE (first_name = 'Irena' 
+	OR first_name = 'Vidya' 
+	OR first_name = 'Maya')
+	AND gender = 'M'
+ORDER BY last_name DESC, first_name DESC</string>
+		<string>SELECT * 
+FROM employees 
+WHERE (first_name = 'Irena' 
+	OR first_name = 'Vidya' 
+	OR first_name = 'Maya')
+	AND gender = 'M'
+ORDER BY last_name, first_name</string>
+		<string>SELECT * 
+FROM employees 
+WHERE (first_name = 'Irena' 
+	OR first_name = 'Vidya' 
+	OR first_name = 'Maya')
+	AND gender = 'M'
+ORDER BY last_name, first_name DESC</string>
+		<string>SELECT * 
+FROM employees 
+WHERE last_name LIKE 'E%'
+ORDER BY emp_no DESC</string>
+		<string>SELECT * 
+FROM employees 
+WHERE last_name LIKE 'E%'
+ORDER BY emp_no</string>
+		<string>SELECT * 
+FROM employees 
+WHERE last_name LIKE 'E%'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE (first_name = 'Irena' 
+	OR first_name = 'Vidya' 
+	OR first_name = 'Maya')
+	AND gender = 'M'
+ORDER BY first_name, last_name</string>
+		<string>SELECT * 
+FROM employees 
+WHERE (first_name = 'Irena' 
+	OR first_name = 'Vidya' 
+	OR first_name = 'Maya')
+	AND gender = 'M'
+ORDER BY first_name</string>
+		<string>SELECT *
+FROM employees 
+WHERE (last_name LIKE '%q%')
+	AND last_name NOT LIKE '%qu%'</string>
+		<string>FROM employees 
+WHERE (last_name LIKE '%q%')
+	AND last_name NOT LIKE '%qu%'</string>
 		<string>FROM employees 
 WHERE last_name LIKE '%q%'
-	AND last_name IS NOT '%qu%'</string>
+	AND last_name NOT LIKE '%qu%'</string>
 		<string>SELECT * 
 FROM employees 
 WHERE (hire_date BETWEEN '1990-01-01' AND '1999-12-31')
 	AND birth_date LIKE '%-12-25'</string>
+		<string>FROM employees 
+WHERE last_name LIKE '%q%'
+	AND last_name &lt;&gt; '%qu%'</string>
+		<string>FROM employees 
+WHERE last_name LIKE '%q%'
+	AND last_name IS NOT '%qu%'</string>
 		<string>FROM employees 
 WHERE last_name LIKE '%q%'
 	AND last_name IS NOT LIKE '%qu%'</string>
@@ -120,51 +184,6 @@ WHERE (first_name = 'Irena'
 		<string>FROM employees 
 WHERE last_name LIKE '%q%'
 	NOT last_name LIKE '%qu%'</string>
-		<string>SELECT *
-FROM employees 
-WHERE last_name LIKE '%q%'
-	NOT last_name LIKE '%qu%'</string>
-		<string>SELECT * 
-FROM employees 
-WHERE first_name = 'Irena' 
-	OR first_name = 'Vidya' 
-	OR first_name = 'Maya'
-	AND gender = 'M'</string>
-		<string>SELECT * 
-FROM employees 
-WHERE first_name = 'Irena' 
-	OR first_name = 'Vidya' 
-	OR first_name = 'Maya'</string>
-		<string>SELECT * 
-FROM employees 
-WHERE first_name = 'Irena' OR 'Vidya' OR 'Maya'</string>
-		<string>SELECT *
-FROM employees 
-WHERE last_name LIKE '%q%'</string>
-		<string>SELECT * 
-FROM employees 
-WHERE birth_date LIKE '%-12-25'</string>
-		<string>SELECT * 
-FROM employees 
-WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'</string>
-		<string>SELECT * 
-FROM employees 
-WHERE hire_date BETWEEN 1990-01-01 AND 1999-12-31</string>
-		<string>SELECT * 
-FROM employees 
-WHERE hire_date &gt; 1989-12-31</string>
-		<string>SELECT * 
-FROM employees 
-WHERE last_name LIKE 'E%'</string>
-		<string>SELECT * 
-FROM employees 
-WHERE first_name IN ('Irena','Vidya','Maya')</string>
-		<string>SELECT emp_no, first_name, last_name
-FROM employees
-WHERE last_name IN ('Herber', 'Dredge', 'Lipner', 'Baek')</string>
-		<string>SELECT first_name
-FROM employees
-WHERE first_name LIKE '%sus%'</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
