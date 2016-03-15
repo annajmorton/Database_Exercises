@@ -51,6 +51,8 @@
 		<dict>
 			<key>connectionEncoding</key>
 			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
 			<key>contentPageNumber</key>
 			<integer>1</integer>
 			<key>contentSelection</key>
@@ -74,7 +76,7 @@
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
-			<string>{{0, 0}, {694, 456}}</string>
+			<string>{{0, 0}, {987, 326}}</string>
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>table</key>
@@ -93,6 +95,21 @@
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>SELECT *
+FROM employees 
+WHERE last_name LIKE '%q%'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE birth_date LIKE '%-12-25'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE hire_date BETWEEN 1990-01-01 AND 1999-12-31</string>
+		<string>SELECT * 
+FROM employees 
+WHERE hire_date &gt; 1989-12-31</string>
 		<string>SELECT * 
 FROM employees 
 WHERE last_name LIKE 'E%'</string>
