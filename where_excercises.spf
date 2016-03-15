@@ -74,7 +74,7 @@
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
-			<string>{{0, 0}, {987, 326}}</string>
+			<string>{{0, 0}, {694, 456}}</string>
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>table</key>
@@ -93,28 +93,37 @@
 	<array/>
 	<key>queryHistory</key>
 	<array>
-		<string>SELECT *
-FROM employees 
+		<string>FROM employees 
 WHERE last_name LIKE '%q%'
-	NOT last_name LIKE '%qu%'</string>
+	AND last_name IS NOT '%qu%'</string>
 		<string>SELECT * 
 FROM employees 
 WHERE (hire_date BETWEEN '1990-01-01' AND '1999-12-31')
 	AND birth_date LIKE '%-12-25'</string>
-		<string>SELECT * 
-FROM employees 
-WHERE last_name LIKE 'E%'
-	AND last_name LIKE '%e'</string>
+		<string>FROM employees 
+WHERE last_name LIKE '%q%'
+	AND last_name IS NOT LIKE '%qu%'</string>
 		<string>SELECT * 
 FROM employees 
 WHERE last_name LIKE 'E%'
 	OR last_name LIKE '%e'</string>
 		<string>SELECT * 
 FROM employees 
+WHERE last_name LIKE 'E%'
+	AND last_name LIKE '%e'</string>
+		<string>SELECT * 
+FROM employees 
 WHERE (first_name = 'Irena' 
 	OR first_name = 'Vidya' 
 	OR first_name = 'Maya')
 	AND gender = 'M'</string>
+		<string>FROM employees 
+WHERE last_name LIKE '%q%'
+	NOT last_name LIKE '%qu%'</string>
+		<string>SELECT *
+FROM employees 
+WHERE last_name LIKE '%q%'
+	NOT last_name LIKE '%qu%'</string>
 		<string>SELECT * 
 FROM employees 
 WHERE first_name = 'Irena' 
@@ -156,16 +165,6 @@ WHERE last_name IN ('Herber', 'Dredge', 'Lipner', 'Baek')</string>
 		<string>SELECT first_name
 FROM employees
 WHERE first_name LIKE '%sus%'</string>
-		<string>SELECT emp_no, first_name, last_name
-FROM `employees`
-WHERE emp_no BETWEEN 10026 AND 10082</string>
-		<string>SELECT DISTINCT first_name
-FROM employees
-WHERE first_name LIKE '%sus%'</string>
-		<string>SELECT *
-FROM employees
-WHERE 
-hire_date = '1985-01-01'</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
