@@ -95,6 +95,9 @@
 	<array>
 		<string>SELECT * 
 FROM employees 
+WHERE last_name LIKE 'E%'</string>
+		<string>SELECT * 
+FROM employees 
 WHERE first_name IN ('Irena','Vidya','Maya')</string>
 		<string>SELECT emp_no, first_name, last_name
 FROM employees
