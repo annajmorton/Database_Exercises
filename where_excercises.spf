@@ -51,8 +51,6 @@
 		<dict>
 			<key>connectionEncoding</key>
 			<string>utf8</string>
-			<key>contentFilter</key>
-			<dict/>
 			<key>contentPageNumber</key>
 			<integer>1</integer>
 			<key>contentSelection</key>
@@ -97,6 +95,42 @@
 	<array>
 		<string>SELECT *
 FROM employees 
+WHERE last_name LIKE '%q%'
+	NOT last_name LIKE '%qu%'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE (hire_date BETWEEN '1990-01-01' AND '1999-12-31')
+	AND birth_date LIKE '%-12-25'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE last_name LIKE 'E%'
+	AND last_name LIKE '%e'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE last_name LIKE 'E%'
+	OR last_name LIKE '%e'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE (first_name = 'Irena' 
+	OR first_name = 'Vidya' 
+	OR first_name = 'Maya')
+	AND gender = 'M'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE first_name = 'Irena' 
+	OR first_name = 'Vidya' 
+	OR first_name = 'Maya'
+	AND gender = 'M'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE first_name = 'Irena' 
+	OR first_name = 'Vidya' 
+	OR first_name = 'Maya'</string>
+		<string>SELECT * 
+FROM employees 
+WHERE first_name = 'Irena' OR 'Vidya' OR 'Maya'</string>
+		<string>SELECT *
+FROM employees 
 WHERE last_name LIKE '%q%'</string>
 		<string>SELECT * 
 FROM employees 
@@ -132,12 +166,6 @@ WHERE first_name LIKE '%sus%'</string>
 FROM employees
 WHERE 
 hire_date = '1985-01-01'</string>
-		<string>select 1 &lt;&gt; 0</string>
-		<string>SELECT * 
-FROM employees
-WHERE first_name LIKE '%sus%'</string>
-		<string>select * from dept_emp</string>
-		<string>select * from departments</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
