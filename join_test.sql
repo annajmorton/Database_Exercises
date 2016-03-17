@@ -78,6 +78,24 @@ ORDER BY role_qty, role_name;
 -- the code for employees database 
 
 
+SELECT d.dept_name, CONCAT(e.first_name, ' ', e.last_name) AS full_name, e.emp_no, MAX(dm.to_date)
+FROM employees AS e
+JOIN dept_manager AS dm 
+  ON dm.emp_no = e.emp_no
+JOIN departments AS d
+  ON d.dept_no = dm.dept_no
+GROUP BY d.dept_name;
+
+
+SELECT d.dept_name, CONCAT(e.first_name, ' ', e.last_name) AS full_name
+FROM employees AS e
+JOIN dept_manager AS dm 
+  ON dm.emp_no = e.emp_no
+JOIN departments AS d
+  ON d.dept_no = dm.dept_no
+WHERE dm.to_date > now();
+
+
 
 
 
